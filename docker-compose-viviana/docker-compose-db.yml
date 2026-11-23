@@ -1,0 +1,21 @@
+# docker-compose -f docker-compose-viviana/docker-compose-db.yml up -d
+# docker-compose -f docker-compose-viviana/docker-compose-db.yml down
+version: '3'
+
+services:
+  sqlserver:
+    image: vivianacubas/sql-server:2025
+    container_name: sqlserver-solicitante
+    environment:
+      MSSQL_SA_PASSWORD: "Admin12345"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1434:1433"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    name: my-network
+    driver: bridge

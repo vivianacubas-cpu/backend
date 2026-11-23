@@ -1,0 +1,37 @@
+server:
+  port: ${PORT:8085}
+
+spring:
+  application:
+    name: alfonso-ugarte-api
+
+  datasource:
+    # SQL Server local (docker-compose-jimena exposes port 1433).
+    # In Docker, DATABASE_URL overrides this value with the service name.
+    url: ${DATABASE_URL:jdbc:sqlserver://localhost:1434;databaseName=AlfonsoUgarteDB;encrypt=true;trustServerCertificate=true}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:Admin12345}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+      minimum-idle: 2
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    # No tags-sorter: Swagger UI respects the order declared in OpenApiConfig.java

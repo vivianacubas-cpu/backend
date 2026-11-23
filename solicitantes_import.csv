@@ -1,0 +1,13 @@
+tipoDocumento,numeroDocumento,nombres,apellidoPaterno,apellidoMaterno,telefono,correo,direccion,departamento,provincia,distrito
+DNI,70812345,Carlos,Ramirez,Lopez,987654321,carlos.ramirez@example.com,Av. Los Alamos 123,Lima,Lima,Miraflores
+DNI,71234567,Maria Elena,Quispe,Torres,912345678,maria.quispe@example.com,Jr. Huallaga 456,Lima,Lima,San Isidro
+DNI,72345678,Luis Alberto,Fernandez,Mendoza,923456789,luis.fernandez@example.com,Calle Real 789,Cusco,Cusco,Cusco
+DNI,73456789,Ana Sofia,Vargas,Huanca,934567890,ana.vargas@example.com,Av. Sol 321,Arequipa,Arequipa,Arequipa
+DNI,74567890,Pedro Pablo,Morales,Castro,945678901,pedro.morales@example.com,Jr. Union 654,La Libertad,Trujillo,Trujillo
+DNI,75678901,Rosa Carmen,Diaz,Flores,956789012,rosa.diaz@example.com,Av. Grau 987,Piura,Piura,Piura
+DNI,76789012,Jorge Luis,Mamani,Ccopa,967890123,jorge.mamani@example.com,Calle Puno 147,Puno,Puno,Puno
+DNI,77890123,Carmen Rosa,Huanca,Apaza,978901234,carmen.huanca@example.com,Av. Tacna 258,Tacna,Tacna,Tacna
+DNI,78901234,Juan Carlos,Llanos,Vega,989012345,juan.llanos@example.com,Jr. Comercio 369,Ica,Ica,Ica
+DNI,79012345,Lucia Paola,Salas,Perez,990123456,lucia.salas@example.com,Av. Loreto 741,Loreto,Maynas,Iquitos
+DNI,80123456,Miguel Angel,Choque,Quispe,901234567,miguel.choque@example.com,Calle Ayacucho 852,Ayacucho,Huamanga,Ayacucho
+CNE,A1234567890123456789,Sandra Beatriz,Gomez,Rivas,912348765,sandra.gomez@example.com,Jr. Lima 963,Junin,Huancayo,Huancayo

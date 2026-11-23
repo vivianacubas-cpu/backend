@@ -1,0 +1,24 @@
+# docker-compose -f docker-compose-jimena/docker-compose-be.yml up -d
+# docker-compose -f docker-compose-jimena/docker-compose-be.yml down
+version: '3'
+
+services:
+  backend:
+    image: jimenaaburto/springboot-sqlserver:3.0   # replace with your Docker Hub username
+    container_name: springboot-sqlserver            # Spring Boot container name
+    ports:
+      - "8085:8085"
+    environment:
+      - PORT=8085
+      - SERVER_URL=http://localhost:8085
+      - DATABASE_URL=jdbc:sqlserver://sqlserver:1433;databaseName=AlfonsoUgarteDB;encrypt=true;trustServerCertificate=true
+      - DATABASE_USERNAME=sa
+      - DATABASE_PASSWORD=Admin12345
+      - DATABASE_DRIVER=com.microsoft.sqlserver.jdbc.SQLServerDriver
+    networks:
+      - my-network
+
+# CONSUME AN EXISTING NETWORK CREATED BY ANOTHER COMPOSE FILE
+networks:
+  my-network:
+    external: true   # uses the network created by the database compose file

@@ -1,0 +1,22 @@
+# docker-compose -f docker-compose-jimena/docker-compose-db.yml up -d
+# docker-compose -f docker-compose-jimena/docker-compose-db.yml down
+version: '3'
+
+services:
+  sqlserver:
+    image: jimenaaburto/sql-server:2022   # replace with your Docker Hub username
+    container_name: sqlserver             # SQL Server container name
+    environment:
+      SA_PASSWORD: "Admin12345"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    networks:
+      - my-network
+
+# CREATE A SHARED NETWORK IN THIS COMPOSE FILE
+networks:
+  my-network:
+    name: my-network   # shared network, visible from both compose files
+    driver: bridge

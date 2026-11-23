@@ -1,0 +1,23 @@
+# docker-compose -f docker-compose-viviana/docker-compose-be.yml up -d
+# docker-compose -f docker-compose-viviana/docker-compose-be.yml down
+version: '3'
+
+services:
+  backend:
+    image: vivianacubas/solicitante-crud:1.0
+    container_name: solicitante-crud
+    ports:
+      - "8085:8085"
+    environment:
+      - PORT=8085
+      - SERVER_URL=http://localhost:8085
+      - DATABASE_URL=jdbc:sqlserver://sqlserver-solicitante:1433;databaseName=AlfonsoUgarteDB;encrypt=true;trustServerCertificate=true
+      - DATABASE_USERNAME=sa
+      - DATABASE_PASSWORD=Admin12345
+      - DATABASE_DRIVER=com.microsoft.sqlserver.jdbc.SQLServerDriver
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    external: true
